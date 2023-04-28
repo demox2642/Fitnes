@@ -12,5 +12,5 @@ data class LessonWithTrainerDB(
         parentColumn = LessonDBContract.Columns.COACH_ID,
         entityColumn = TrainerDBContract.Columns.ID,
     )
-    val trainer: TrainerDB,
+    val trainer: TrainerDB? = null,
 )

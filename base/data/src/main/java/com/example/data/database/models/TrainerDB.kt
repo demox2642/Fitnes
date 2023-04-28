@@ -7,7 +7,6 @@ import com.example.data.database.contracts.TrainerDBContract
 
 @Entity(
     tableName = TrainerDBContract.TABLE_NAME,
-
 )
 data class TrainerDB(
     @ColumnInfo(name = TrainerDBContract.Columns.DESCRIPTION)

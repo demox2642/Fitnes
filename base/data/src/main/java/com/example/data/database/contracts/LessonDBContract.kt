@@ -14,7 +14,7 @@ object LessonDBContract {
         const val DESCRIPTION = "description"
         const val ENDTIME = "endTime"
         const val IS_CANCELLED = "is_cancelled"
-        const val NAME = "name"
+        const val NAME = "name_lesson"
         const val PLACE = "place"
         const val SERVICE_ID = "service_id"
         const val STARTTIME = "startTime"

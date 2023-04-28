@@ -4,5 +4,5 @@ import com.example.domain.models.LessonData
 import kotlinx.coroutines.flow.Flow
 
 interface LessonsRepository {
-    suspend fun getLessonsList(): Flow<LessonData>
+    suspend fun getLessonsList(): Flow<List<LessonData>>
 }

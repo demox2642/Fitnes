@@ -2,20 +2,11 @@ package com.example.data.database.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 import com.example.data.database.contracts.LessonDBContract
-import com.example.data.database.contracts.TrainerDBContract
 
 @Entity(
     tableName = LessonDBContract.TABLE_NAME,
-    foreignKeys = [
-        ForeignKey(
-            entity = TrainerDB::class,
-            parentColumns = [TrainerDBContract.Columns.ID],
-            childColumns = [LessonDBContract.Columns.COACH_ID],
-        ),
-    ],
 
 )
 data class LessonDB(
@@ -27,7 +18,7 @@ data class LessonDB(
     @ColumnInfo(name = LessonDBContract.Columns.CLIENT_RECORDED)
     val client_recorded: Boolean,
     @ColumnInfo(name = LessonDBContract.Columns.COACH_ID)
-    val coach_id: String,
+    val coach_id: String? = "",
     @ColumnInfo(name = LessonDBContract.Columns.COLOR)
     val color: String,
     @ColumnInfo(name = LessonDBContract.Columns.COMMERCIAL)
@@ -35,13 +26,13 @@ data class LessonDB(
     @ColumnInfo(name = LessonDBContract.Columns.DATE)
     val date: String,
     @ColumnInfo(name = LessonDBContract.Columns.DESCRIPTION)
-    val description: String,
+    val description: String?,
     @ColumnInfo(name = LessonDBContract.Columns.ENDTIME)
     val endTime: String,
     @ColumnInfo(name = LessonDBContract.Columns.IS_CANCELLED)
     val is_cancelled: Boolean,
     @ColumnInfo(name = LessonDBContract.Columns.NAME)
-    val name: String,
+    val name_lesson: String?,
     @ColumnInfo(name = LessonDBContract.Columns.PLACE)
     val place: String,
     @ColumnInfo(name = LessonDBContract.Columns.SERVICE_ID)
