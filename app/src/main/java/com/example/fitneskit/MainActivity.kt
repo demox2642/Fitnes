@@ -34,7 +34,9 @@ import com.example.presentation.applicationsScreens
 import com.example.presentation.chatScreens
 import com.example.presentation.lessonsScreens
 import com.example.presentation.moreScreens
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

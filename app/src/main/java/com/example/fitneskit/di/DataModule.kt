@@ -1,5 +1,6 @@
 package com.example.fitneskit.di // ktlint-disable package-name
 
+import com.example.data.database.FitnesKitDB
 import com.example.data.repository.* // ktlint-disable no-wildcard-imports
 import com.example.data.servises.FitnesKitApi
 import com.example.domain.reposirory.LessonsRepository
@@ -73,7 +74,7 @@ class DataModule {
 
     @Singleton
     @Provides
-    fun provideLessonsRepository(fitnesKitApi: FitnesKitApi): LessonsRepository {
-        return LessonsRepositoryImpl(fitnesKitApi)
+    fun provideLessonsRepository(fitnesKitDB: FitnesKitDB, fitnesKitApi: FitnesKitApi): LessonsRepository {
+        return LessonsRepositoryImpl(fitnesKitDB, fitnesKitApi)
     }
 }
