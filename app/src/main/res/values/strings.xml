@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FitnesKit</string>
+    <string name="app_menu_lessons">Занятия</string>
+    <string name="app_menu_applications">Заявки</string>
+    <string name="app_menu_add">Добавить</string>
+    <string name="app_menu_chat">Чат</string>
+    <string name="app_menu_more">Ещё</string>
 </resources>

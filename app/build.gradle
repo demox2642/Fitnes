@@ -71,6 +71,8 @@ dependencies {
     implementation project(path :':more:domain')
     implementation project(path :':more:presentation')
 
+    implementation project(path :':base:presentation')
+
     implementation "androidx.compose.material3:material3:1.0.1"
 
     implementation 'androidx.core:core-ktx:1.6.0'
